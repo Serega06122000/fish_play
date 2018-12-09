@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Рыбалка от KKOOLL</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" >
+
+</head>
+
+<body>
+    <div id=main>
+        <div id="start" class="screen ">
+            <!-- 1 окно-->
+            <img id="fish_start" src="image/fish1.png" marquee alt="" height="115">
+            <H1 align=center>Рыбалка</H1>
+            <h3>Введите ваше имя
+                <div id="no_auth" style="display:none;color:red;font-size:25px;">Корректно введите время и кол-во рыбок</div>
+            </h3>
+            <input placeholder="Имя" id="input_name" required type="name">
+            <br>
+            <label> Кол-во рыбок:</label>
+            <input id="start_fish" class="start_value" value="10">
+            <label>Время</label>
+            <input id="start_time" class="start_value" value="30">сек
+            <button class="cp" id="startbutton">Play</button>
+        </div>
+        <div id="game" class="screen">
+            <!--Второе окно-->
+            <div id="panel">
+                <div id="user_name" class="font_game"></div>
+                <div id="timer">Таймер:00:00</div>
+                <div id="pause"> Пауза</div>
+                <div id="score">Счёт игрока:</div>
+            </div>
+            <div id="fish"></div>
+        </div>
+        <div id="result" class="screen">
+            <!-- Третье окно-->
+            <table align="center">
+                <th>
+                    <h3>
+                        <a id="name_player"> </a>
+                        <br>
+                        <a id="result_score">Ваш счёт: </a>
+                        </br>
+                        <a id="time">Время</a>
+
+                        </h1>
+                </th>
+                <th>
+                    <a id="record"></a>
+                </th>
+            </table>
+            <div style="display: inline-block;">
+                <button id="play_again">Играть заного</button>
+                <button id="start_return">Вернуться в главное меню</button>
+            </div>
+            <!-- <img src="image/trava_vodorosli.png" width="1000"></h3> -->
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

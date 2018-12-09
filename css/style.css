@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+}
+
+:active {
+    cursor: url("../image/active.png"), default;
+}
+
+* {
+    outline: none !important
+}
+
+#start img {
+    position: absolute;
+    margin: 110px 5px 5px 100px;
+    animation-name: img_fish;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anima_fish {}
+
+@keyframes img_fish {
+    0% {
+        transform: scale(-1, 1);
+        margin-left: 100px;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        margin-left: 800px;
+    }
+}
+
+#menu {}
+
+.cp {}
+
+#play {}
+
+#END {}
+
+#startbutton {
+    display: none;
+}
+
+#main {
+    padding-top: 15vh;
+    height: 85vh;
+    background-image: url(../image/bubble.png);
+    background-position: center;
+    /*background-repeat:no-repeat;Убирает повторение*/
+    /* background-size: 100%; что бы растянуть на весь экран картинку*/
+}
+
+.screen:active {
+    cursor: url("../image/active.png"), default;
+
+}
+
+.screen:hover {
+    cursor: url("../image/hover.png"), auto;
+
+}
+
+.screen {
+    border-color: slateblue;
+    border: 10px;
+    width: 1000px;
+    height: 600px;
+    background: yellow;
+    margin: auto;
+    border-radius: 60px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    position: relative;
+
+}
+
+#start,
+#game,
+#result {
+
+    font-size: 2em;
+
+}
+#record {
+    height: 100px;
+    width: 75px;
+    background: #3f4c6b;
+}
+#game,
+#result {
+    display: none;
+}
+
+.font_game {
+    font-family: 'Pacifico', cursive;
+}
+
+#start h1 {
+    font-family: 'Caveat', cursive;
+    font-style: italic;
+    font-size: 120px;
+}
+
+#start h3 {
+    font-family: 'Pacifico', cursive;
+    margin-left: 170px;
+    margin-top: 50px;
+}
+
+#input_name {
+    background: linear-gradient(to right, #9d50bb, #6e48aa);
+    border: 0;
+    font-family: 'Pacifico', cursive;
+    width: 600px;
+    height: 90px;
+    border-radius: 30px;
+    outline: 0;
+    margin-left: 170px;
+}
+
+#input_name[placeholder] {
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+    text-indent: 10px;
+    caret-color: blueviolet;
+    color: rgb(80, 76, 76);
+}
+#start label{
+    margin-left: 90px;
+    
+}
+.start_value{
+    margin-top: 20px;
+    text-indent:30px;
+    width: 80px;
+    height: 50px;
+    border-radius: 30px;
+    outline: 0;
+    background: linear-gradient(to right, #9d50bb, #6e48aa);
+    border: 0;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+
+}
+.start_value[placeholder]{ 
+    text-indent: 10px;
+    margin-left:10px; 
+
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+}
+
+#start button,
+#result button {
+    width: 200px;
+    height: 90px;
+    margin-left: 400px;
+    margin-top: 10px;
+    background: black;
+    border-radius: 30px;
+    border: 0;
+    font-size: 30px;
+    background: linear-gradient(to right, #606c88, #3f4c6b);
+}
+
+#result button {
+    width: 200px;
+    height: 90px;
+    margin-left: 400px;
+    margin-top: 10px;
+    background: black;
+    border-radius: 30px;
+    border: 0;
+    font-size: 30px;
+    background: linear-gradient(to right, #606c88, #3f4c6b);
+}
+
+.fish {
+    height: 60px;
+    width: 70px;
+    position: absolute;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+
+}
+
+#panel {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    background: linear-gradient(90deg, rgba(21, 21, 120, 0.6474964985994398) 0%, rgba(21, 94, 148, 0.4906337535014006) 94%);
+}
+
+#pause {
+    width: 90px;
+    height: 60px;
+    background: linear-gradient(115deg, #473577, #67a8b4);
+    position: relative;
+    border-radius: 6px;
+
+}
+
+#result,
+#game {
+    position: relative;
+    overflow: hidden;
+
+}
+
+#result img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#name_player,
+#result_score,
+#time {
+    display: block;
+    margin-left: 30px;
+    font-family: 'Pacifico', cursive;
+}
+#play_again{
+    position: relative;
+}
+@keyframes anime1 {
+    0% {
+        transform: translate3d(800px, 100px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: translate3d(600px, 120px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: translate3d(450px, 100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    70% {
+        transform: translate3d(300px, 200px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    80% {
+        transform: translate3d(50px, 220px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    90% {
+        transform: translate3d(10px, 240px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translate3d(-100px, 240px, 0px);
+    }
+
+}
+
+@keyframes anime2 {
+    0% {
+        transform: translate3d(300px, 120px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: translate3d(480px, 120px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: translate3d(580px, 300px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    70% {
+        transform: translate3d(620px, 300px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translate3d(800px, 120px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+
+}
+
+@keyframes anime3 {
+    0% {
+        transform: translate3d(340px, 120px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: translate3d(420px, 240px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: translate3d(540px, 320px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    70% {
+        transform: translate3d(580px, 220px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translate3d(660px, 120px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+
+}
+
+@keyframes anime4 {
+    0% {
+        transform: translate3d(-50px, 125px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: translate3d(550px, 100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    70% {
+        transform: translate3d(670px, 300px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translate3d(900px, 125px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+
+}
+
+@keyframes anime5 {
+    0% {
+        transform: translate3d(1050px, 160px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: translate3d(600px, 120px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: translate3d(500px, 0px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    70% {
+        transform: translate3d(322px, 200px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    80% {
+        transform: translate3d(210px, 100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    90% {
+        transform: translate3d(170px, 10px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translate3d(80px, 50px, 0px);
+    }
+}
+
+@keyframes anime6 {
+    0% {
+        transform: translate3d(1050px, 100px, 0px);
+        animation-timing-function: ease-in;
+    }
+
+    30% {
+        transform: translate3d(560px, 200px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: translate3d(420px, 100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    70% {
+        transform: translate3d(210px, 300px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    80% {
+        transform: translate3d(150px, 500px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    90% {
+        transform: translate3d(100px, 100px, 0px);
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        transform: translate3d(50px, 10px, 0px);
+    }
+}
+@keyframes anime7 {
+    0% {
+        left: 200PX;
+        TOP:500PX;
+    }
+    30%{
+        left: 400PX;
+        TOP:500PX;
+    }
+    50%{
+        left: 450PX;
+        TOP:400PX;
+    }
+    70%{
+        left: 550PX;
+        TOP:200PX;
+    }
+    80%{
+        left: 700PX;
+        TOP:100PX;
+    }
+    90%{
+        left: 1000PX;
+        TOP:0PX;
+    }
+    100% {
+        left: 200PX;
+        TOP:500PX;
+    }
+}
+@keyframes anime8 {
+    0% {
+        left: 0PX;
+        TOP:200PX;
+    }
+    30%{
+        left: 400PX;
+        TOP:500PX;
+    }
+    50%{
+        left: 700PX;
+        TOP:500PX;
+    }
+    70%{
+        left: 400PX;
+        TOP:200PX;
+    }
+    100%{
+        lleft: 0PX;
+        TOP:100PX;
+    }
+    
+}
+@keyframes anime9 {
+    0% {
+        left: 50PX;
+        TOP:200PX;
+    }
+    30%{
+        left: 150PX;
+        TOP:500PX;
+    }
+    50%{
+        left: 400PX;
+        TOP:500PX;
+    }
+    70%{
+        left: 200PX;
+        TOP:200PX;
+    }
+    100%{
+        left: 50PX;
+        TOP:200PX;
+    }
+    
+}
+@keyframes anime10 { 
+    0% { 
+    transform: translate3d(-50px, 100px, 0px); 
+    animation-timing-function: ease-in; 
+    } 
+    30%{ 
+    transform: translate3d(600px, 120px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    50%{ 
+    transform: translate3d(400px, 500px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    70%{ 
+    transform: translate3d(700px, 200px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    80%{ 
+    transform: translate3d(800px, 220px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    90%{ 
+    transform: translate3d(860px, 500px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    100% { 
+    transform: translate3d(790px, 100px, 0px); 
+    } 
+    }
+     
+    @keyframes anime11 { 
+    0% { 
+    transform: translate3d(-50px, 100px, 0px); 
+    animation-timing-function: ease-in; 
+    } 
+    30%{ 
+    transform: translate3d(600px, 190px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    50%{ 
+    transform: translate3d(650px, 100px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    70%{ 
+    transform: translate3d(760px, 200px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    80%{ 
+    transform: translate3d(830px, 220px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    90%{ 
+    transform: translate3d(900px, 300px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    100% { 
+    transform: translate3d(910px, 0px, 0px); 
+    } 
+    }
+     
+    @keyframes anime12 { 
+    0% { 
+    transform: translate3d(-50px, 100px, 0px); 
+    animation-timing-function: ease-in; 
+    } 
+    30%{ 
+    transform: translate3d(400px, 120px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    50%{ 
+    transform: translate3d(480px, 100px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    70%{ 
+    transform: translate3d(560px, 250px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    80%{ 
+    transform: translate3d(650px, 320px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    90%{ 
+    transform: translate3d(700px, 400px, 0px); 
+    animation-timing-function: ease-out; 
+    } 
+    100% { 
+    transform: translate3d(740px, 500px, 0px); 
+    } 
+    }
